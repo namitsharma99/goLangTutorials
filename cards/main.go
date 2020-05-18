@@ -59,6 +59,39 @@ func main() {
     fmt.Println(i, stack)
   }
 
+  //// Part 2 ////
+
+  // byte slices
+
+  temp := "Hello World!"
+  fmt.Println(temp)
+  fmt.Println([]byte(temp))
+
+  cards = newDeck()
+  fmt.Println(cards.toString())
+
+  // saving //
+
+  cards = newDeck()
+  cards.saveToFile("helloCards")
+
+  //  retrieving //
+  cards = newDeckFromFile("helloCards")
+  cards.print()
+
+  // shuffle 1 //
+  cards = newDeck()
+  cards.shuffle()
+  cards.print()
+
+  // shuffle 2 //
+  cards = newDeck()
+  cards.shuffle2()
+  cards.print()
+
+
+
+
 }
 
 func newCard() string {
